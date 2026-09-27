@@ -12,7 +12,7 @@ import time
 from datetime import datetime
 
 
-# Standard date and time format
+
 DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 
