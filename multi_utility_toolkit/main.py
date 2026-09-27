@@ -20,11 +20,6 @@ from toolkit.toolkit import math_utils
 from toolkit.toolkit import random_utils
 from toolkit.toolkit import file_utils
 
-
-# ---------------------------------------------------------
-# Common Utility Functions
-# ---------------------------------------------------------
-
 def print_header(title):
     """Display a formatted section heading."""
     print("\n" + "=" * 55)
@@ -68,10 +63,6 @@ def get_float(prompt, minimum=None):
             print("Invalid input! Please enter a number.")
 
 
-# ---------------------------------------------------------
-# DATETIME AND TIME MENU
-# ---------------------------------------------------------
-
 def datetime_menu():
     """Display datetime and time operations."""
     while True:
@@ -87,7 +78,7 @@ def datetime_menu():
 
         choice = get_integer("Enter your choice: ", 1, 6)
 
-        # Current Date and Time
+    
         if choice == 1:
 
             current = datetime_utils.current_datetime()
@@ -95,7 +86,7 @@ def datetime_menu():
             print("\nCurrent Date and Time:")
             print(current)
 
-        # Difference between dates
+        
         elif choice == 2:
 
             first_date = input(
@@ -123,7 +114,7 @@ def datetime_menu():
                     "\nUse: YYYY-MM-DD HH:MM:SS"
                 )
 
-        # Custom date format
+        
         elif choice == 3:
 
             date_text = input(
@@ -149,14 +140,14 @@ def datetime_menu():
 
                 print("Invalid date/time or format.")
 
-        # Stopwatch
+        
         elif choice == 4:
 
             elapsed = datetime_utils.run_stopwatch()
 
             print(f"\nElapsed Time: {elapsed:.2f} seconds")
 
-        # Countdown
+        
         elif choice == 5:
 
             seconds = get_integer(
@@ -166,15 +157,11 @@ def datetime_menu():
 
             datetime_utils.countdown(seconds)
 
-        # Back
+    
         elif choice == 6:
 
             break
 
-
-# ---------------------------------------------------------
-# MATHEMATICAL OPERATIONS MENU
-# ---------------------------------------------------------
 
 def math_menu():
     """Display mathematical operations."""
@@ -191,7 +178,7 @@ def math_menu():
 
         choice = get_integer("Enter your choice: ", 1, 6)
 
-        # Factorial
+
         if choice == 1:
 
             number = get_integer(
@@ -209,7 +196,7 @@ def math_menu():
 
                 print(f"Error: {error}")
 
-        # Compound interest
+    
         elif choice == 2:
 
             principal = get_float(
@@ -248,7 +235,7 @@ def math_menu():
 
                 print(f"Error: {error}")
 
-        # Trigonometry
+        
         elif choice == 3:
 
             angle = get_float(
@@ -261,7 +248,7 @@ def math_menu():
             print(f"cos({angle}) = {result['cos']:.6f}")
             print(f"tan({angle}) = {result['tan']:.6f}")
 
-        # Geometric shapes
+    
         elif choice == 4:
 
             print("\nGeometric Shapes")
@@ -324,7 +311,7 @@ def math_menu():
 
                 print(f"\nArea of Triangle: {area:.2f}")
 
-        # Logarithm
+        
         elif choice == 5:
 
             number = get_float(
@@ -359,15 +346,12 @@ def math_menu():
 
                 print(f"Error: {error}")
 
-        # Back
+        
         elif choice == 6:
 
             break
 
 
-# ---------------------------------------------------------
-# RANDOM DATA GENERATION MENU
-# ---------------------------------------------------------
 
 def random_menu():
     """Display random data generation options."""
@@ -388,7 +372,7 @@ def random_menu():
             6
         )
 
-        # Random number
+
         if choice == 1:
 
             minimum = get_integer(
@@ -415,7 +399,7 @@ def random_menu():
                     "than maximum value."
                 )
 
-        # Random list
+        
         elif choice == 2:
 
             size = get_integer(
@@ -449,7 +433,7 @@ def random_menu():
                     "than maximum value."
                 )
 
-        # Password
+        
         elif choice == 3:
 
             length = get_integer(
@@ -469,7 +453,7 @@ def random_menu():
 
                 print(f"Error: {error}")
 
-        # OTP
+
         elif choice == 4:
 
             length = get_integer(
@@ -489,7 +473,7 @@ def random_menu():
 
                 print(f"Error: {error}")
 
-        # Sampling
+    
         elif choice == 5:
 
             data = input(
@@ -515,15 +499,10 @@ def random_menu():
 
                 print(f"Error: {error}")
 
-        # Back
+
         elif choice == 6:
 
             break
-
-
-# ---------------------------------------------------------
-# UUID MENU
-# ---------------------------------------------------------
 
 def uuid_menu():
     """Generate a unique UUID4 identifier."""
@@ -534,10 +513,6 @@ def uuid_menu():
     print("\nGenerated UUID4:")
     print(unique_id)
 
-
-# ---------------------------------------------------------
-# FILE OPERATIONS MENU
-# ---------------------------------------------------------
 
 def file_menu():
     """Display file operation options."""
@@ -557,7 +532,7 @@ def file_menu():
             5
         )
 
-        # Create file
+        
         if choice == 1:
 
             filename = input(
@@ -574,7 +549,7 @@ def file_menu():
 
                 print(f"Error: {error}")
 
-        # Write file
+
         elif choice == 2:
 
             filename = input(
@@ -598,7 +573,6 @@ def file_menu():
 
                 print(f"Error: {error}")
 
-        # Read file
         elif choice == 3:
 
             filename = input(
@@ -618,7 +592,7 @@ def file_menu():
 
                 print(f"Error: {error}")
 
-        # Append
+
         elif choice == 4:
 
             filename = input(
@@ -642,15 +616,10 @@ def file_menu():
 
                 print(f"Error: {error}")
 
-        # Back
+    
         elif choice == 5:
 
             break
-
-
-# ---------------------------------------------------------
-# DYNAMIC MODULE EXPLORATION
-# ---------------------------------------------------------
 
 def explore_module():
     """
@@ -710,10 +679,6 @@ def explore_module():
 
     print(attributes)
 
-
-# ---------------------------------------------------------
-# MAIN MENU
-# ---------------------------------------------------------
 
 def main():
     """Run the Multi-Utility Toolkit."""
@@ -775,9 +740,6 @@ def main():
             break
 
 
-# ---------------------------------------------------------
-# __name__ and __main__ Demonstration
-# ---------------------------------------------------------
 
 if __name__ == "__main__":
     main()
